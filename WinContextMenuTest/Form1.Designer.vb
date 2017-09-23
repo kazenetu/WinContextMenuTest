@@ -53,7 +53,7 @@ Partial Class Form1
         '
         Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuItemDinamic, Me.MenuItemStatic})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(132, 48)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(153, 70)
         '
         'MenuItemDinamic
         '
