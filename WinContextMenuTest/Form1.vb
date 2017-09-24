@@ -6,6 +6,9 @@
             Me.MenuItemDinamic.DropDownItems.Add(item.Replace(vbLf, String.Empty), Nothing, AddressOf MenuItemDinamic_Click)
         Next
 
+        ' ダミー用メニューアイテムを非表示
+        Me.MenuItemLongText.Visible = False
+
         ContextMenuStrip1.Update()
 
         e.Cancel = False
