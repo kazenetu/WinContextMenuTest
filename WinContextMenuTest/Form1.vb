@@ -1,4 +1,24 @@
 ﻿Public Class Form1
+
+    ''' <summary>
+    ''' メニューアイテムのインスタンスとテキスト情報
+    ''' </summary>
+    Private menuItemTexts As New Dictionary(Of ToolStripMenuItem, String)
+
+    ''' <summary>
+    ''' ウィンドウ初回表示イベント
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub Form1_Shown(sender As Object, e As EventArgs) Handles MyBase.Shown
+
+        ' メニューアイテムのインスタンスとテキストを格納
+        For Each menuItem As ToolStripMenuItem In Me.ContextMenuStrip1.Items
+            menuItemTexts.Add(menuItem, menuItem.Text)
+        Next
+
+    End Sub
+
     Private Sub ContextMenuStrip1_Opening(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles ContextMenuStrip1.Opening
         Me.MenuItemDinamic.DropDownItems.Clear()
 
@@ -8,6 +28,15 @@
 
         ' ダミー用メニューアイテムを非表示
         Me.MenuItemLongText.Visible = False
+
+        ' メニューアイテムとテキストを設定
+        For Each menuItem As ToolStripMenuItem In Me.ContextMenuStrip1.Items
+            If menuItem.Available Then
+                menuItem.Text = menuItemTexts(menuItem)
+            Else
+                menuItem.Text = String.Empty
+            End If
+        Next
 
         ContextMenuStrip1.Update()
 
