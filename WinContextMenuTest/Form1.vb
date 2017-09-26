@@ -17,6 +17,9 @@
             menuItemTexts.Add(menuItem, menuItem.Text)
         Next
 
+        ' ダミー用メニューアイテムを非表示
+        Me.MenuItemLongText.Visible = False
+
     End Sub
 
     ''' <summary>
@@ -30,9 +33,6 @@
         For Each item In Me.TextBox1.Text.Split(Environment.NewLine)
             Me.MenuItemDinamic.DropDownItems.Add(item.Replace(vbLf, String.Empty), Nothing, AddressOf MenuItemDinamic_Click)
         Next
-
-        ' ダミー用メニューアイテムを非表示
-        Me.MenuItemLongText.Visible = False
 
         ' メニューアイテムとテキストを設定
         For Each menuItem As ToolStripMenuItem In Me.ContextMenuStrip1.Items
