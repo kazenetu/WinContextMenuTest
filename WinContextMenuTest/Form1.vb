@@ -19,6 +19,11 @@
 
     End Sub
 
+    ''' <summary>
+    ''' コンテキストメニューの表示イベント
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
     Private Sub ContextMenuStrip1_Opening(sender As Object, e As System.ComponentModel.CancelEventArgs) Handles ContextMenuStrip1.Opening
         Me.MenuItemDinamic.DropDownItems.Clear()
 
