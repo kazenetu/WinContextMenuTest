@@ -67,4 +67,17 @@
 
         MessageBox.Show(String.Format("動的メニューアイテム[{0}]のクリック", item))
     End Sub
+
+    ''' <summary>
+    ''' 長い文字列のメニューアイテムの表示切替
+    ''' </summary>
+    ''' <param name="sender"></param>
+    ''' <param name="e"></param>
+    Private Sub MenuItemChangeDisplay_Click(sender As Object, e As EventArgs) Handles MenuItemChangeDisplay.Click
+        If Me.MenuItemLongText.Available Then
+            Me.MenuItemLongText.Visible = False
+        Else
+            Me.MenuItemLongText.Visible = True
+        End If
+    End Sub
 End Class

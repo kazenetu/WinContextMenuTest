@@ -29,6 +29,7 @@ Partial Class Form1
         Me.MenuItemDinamic = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuItemStatic = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuItemLongText = New System.Windows.Forms.ToolStripMenuItem()
+        Me.MenuItemChangeDisplay = New System.Windows.Forms.ToolStripMenuItem()
         Me.ContextMenuStrip1.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -52,9 +53,9 @@ Partial Class Form1
         '
         'ContextMenuStrip1
         '
-        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuItemDinamic, Me.MenuItemStatic, Me.MenuItemLongText})
+        Me.ContextMenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuItemDinamic, Me.MenuItemStatic, Me.MenuItemLongText, Me.MenuItemChangeDisplay})
         Me.ContextMenuStrip1.Name = "ContextMenuStrip1"
-        Me.ContextMenuStrip1.Size = New System.Drawing.Size(195, 92)
+        Me.ContextMenuStrip1.Size = New System.Drawing.Size(195, 114)
         '
         'MenuItemDinamic
         '
@@ -73,6 +74,12 @@ Partial Class Form1
         Me.MenuItemLongText.Name = "MenuItemLongText"
         Me.MenuItemLongText.Size = New System.Drawing.Size(194, 22)
         Me.MenuItemLongText.Text = "すごい長いメニューアイテム"
+        '
+        'MenuItemChangeDisplay
+        '
+        Me.MenuItemChangeDisplay.Name = "MenuItemChangeDisplay"
+        Me.MenuItemChangeDisplay.Size = New System.Drawing.Size(194, 22)
+        Me.MenuItemChangeDisplay.Text = "表示切替"
         '
         'Form1
         '
@@ -96,4 +103,5 @@ Partial Class Form1
     Friend WithEvents MenuItemDinamic As ToolStripMenuItem
     Friend WithEvents MenuItemStatic As ToolStripMenuItem
     Friend WithEvents MenuItemLongText As ToolStripMenuItem
+    Friend WithEvents MenuItemChangeDisplay As ToolStripMenuItem
 End Class
